@@ -1,0 +1,6 @@
+pip
+ipython
+matplotlib
+numpy
+pandas
+tqdm
