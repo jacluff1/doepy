@@ -1,0 +1,6 @@
+# ignore file types
+
+# ignore folders
+*Venv/
+
+# ignore files
