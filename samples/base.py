@@ -1,5 +1,5 @@
 #=============================================================================#
-# import external libraries                                                   #
+# import from external libraries                                              #
 #=============================================================================#
 
 import os
@@ -7,37 +7,40 @@ import pandas as pd
 import pkl
 
 #=============================================================================#
-# import internal modules                                                     #
+# import from djak suite                                                      #
 #=============================================================================#
+
+from djak.auxillary_dev.files import pandas_load, pandas_save, pickle_load, pickle_save
+
+#=============================================================================#
+# import from internal modules                                                #
+#=============================================================================#
+
+import config as con
 
 #=============================================================================#
 # class definition                                                            #
 #=============================================================================#
 
-class Base:
+class base:
 
     #=========================================================================#
     # constructor                                                             #
     #=========================================================================#
 
     def __init__(self, *args, **kwargs):
+
+        # set sample file name
+        self.sampleFile = args[0] if len(args)==1 else inp.sampleFile
+
+        # load previous state, if it exists
+        self.load_state()
+
         NotImplemented
 
     #=========================================================================#
     # public sample methods: defined                                          #
     #=========================================================================#
-
-    def load_file(self):
-        NotImplemented
-
-    def load_state(self):
-        NotImplemented
-
-    def save_file(self):
-        NotImplemented
-
-    def save_state(self):
-        NotImplemented
 
     #=========================================================================#
     # public sample methods: declared                                         #
